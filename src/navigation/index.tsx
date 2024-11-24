@@ -20,6 +20,7 @@ import NotoficationScreen from "../screens/Tabs/NotificationScreen";
 import ProfileScreen from "../screens/Tabs/ProfileScreen";
 import RegisterScreen from "../screens/auth/RegisterScreen";
 import Thread from "../screens/Tabs/Chat/Thread";
+import CameraScreen from "../screens/CameraScreen";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 const AuthStack = createNativeStackNavigator<AuthStackParamList>();
@@ -98,6 +99,7 @@ export const AppNavigator = () => {
         <Stack.Screen name="Auth" component={AuthNavigator} />
         <Stack.Screen name="Main" component={MainTabNavigator} />
         <Stack.Screen name="Thread" component={Thread} />
+        <Stack.Screen name="Camera" component={CameraScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -27,11 +27,26 @@
     "plugins": [
       [
         "expo-notifications"
+
         // {
         //   "icon": "./local/path/to/your/app-icon.png",
         //   "color": "#ffffff",
         //   "sounds": ["./local/path/to/your/notification-sound.wav"]
-        // }
+        // },
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Banana-Shield to access your camera",
+          "microphonePermission": "Allow Banana-Shield to access your microphone",
+          "recordAudioAndroid": true
+        }
       ]
     ]
   }
