@@ -36,24 +36,28 @@ const HomeScreen = () => {
         message: "Error",
         description: `Sorry! Internal Server Error...`,
         type: "danger",
+        duration: 4000,
       });
     } else if (data.status === 1) {
       showMessage({
-        message: "Error",
+        message: "Success",
         description: `This is not a "Puwalu" Banana`,
         type: "danger",
+        duration: 4000,
       });
     } else if (data.status === 2) {
       showMessage({
-        message: "Error",
+        message: "Success",
         description: `This is detected as a Puwalu Banana.But this is not a diseased banana`,
         type: "success",
+        duration: 4000,
       });
     } else if (data.status === 3) {
       showMessage({
-        message: "Error",
+        message: "Success",
         description: `Puwalu and diseased detected`,
         type: "success",
+        duration: 4000,
       });
     }
   };
