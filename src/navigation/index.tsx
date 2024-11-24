@@ -21,6 +21,7 @@ import ProfileScreen from "../screens/Tabs/ProfileScreen";
 import RegisterScreen from "../screens/auth/RegisterScreen";
 import Thread from "../screens/Tabs/Chat/Thread";
 import CameraScreen from "../screens/CameraScreen";
+import Solution from "../screens/Solution";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 const AuthStack = createNativeStackNavigator<AuthStackParamList>();
@@ -103,6 +104,7 @@ export const AppNavigator = () => {
         <Stack.Screen name="Main" component={MainTabNavigator} />
         <Stack.Screen name="Thread" component={Thread} />
         <Stack.Screen name="Camera" component={CameraScreen} />
+        <Stack.Screen name="Solution" component={Solution} />
       </Stack.Navigator>
     </NavigationContainer>
   );

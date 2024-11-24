@@ -29,39 +29,40 @@ const HomeScreen = () => {
   useEffect(() => {});
 
   const showAlertMessage = (data: any) => {
-    if (data.status === 0) {
-      showMessage({
-        message: "Error",
-        description: `Sorry! Internal Server Error...`,
-        type: "danger",
-        duration: 4000,
-        position: "center",
-      });
-    } else if (data.status === 1) {
-      showMessage({
-        message: "Success",
-        description: `This is not a "Puwalu" Banana`,
-        type: "danger",
-        duration: 4000,
-        position: "center",
-      });
-    } else if (data.status === 2) {
-      showMessage({
-        message: "Success",
-        description: `This is detected as a Puwalu Banana.But this is not a diseased banana`,
-        type: "success",
-        duration: 4000,
-        position: "center",
-      });
-    } else if (data.status === 3) {
-      showMessage({
-        message: "Success",
-        description: `Puwalu and diseased detected`,
-        type: "success",
-        duration: 4000,
-        position: "center",
-      });
-    }
+    navigation.navigate("Solution", { data });
+    // if (data.status === 0) {
+    //   showMessage({
+    //     message: "Error",
+    //     description: `Sorry! Internal Server Error...`,
+    //     type: "danger",
+    //     duration: 4000,
+    //     position: "center",
+    //   });
+    // } else if (data.status === 1) {
+    //   showMessage({
+    //     message: "Success",
+    //     description: `This is not a "Puwalu" Banana`,
+    //     type: "danger",
+    //     duration: 4000,
+    //     position: "center",
+    //   });
+    // } else if (data.status === 2) {
+    //   showMessage({
+    //     message: "Success",
+    //     description: `This is detected as a Puwalu Banana.But this is not a diseased banana`,
+    //     type: "success",
+    //     duration: 4000,
+    //     position: "center",
+    //   });
+    // } else if (data.status === 3) {
+    //   showMessage({
+    //     message: "Success",
+    //     description: `Puwalu and diseased detected`,
+    //     type: "success",
+    //     duration: 4000,
+    //     position: "center",
+    //   });
+    // }
   };
 
   const requestPermissions = async () => {
