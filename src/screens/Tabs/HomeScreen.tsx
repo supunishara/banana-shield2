@@ -26,13 +26,9 @@ const HomeScreen = () => {
   const URL = "http://192.168.203.108/api/upload-image/";
   const params = route.params || {};
 
-  // const imageUri = Object.values(params).join("");
+  console.log("imageUri----imageUri", params);
 
-  // console.log("imageUri----imageUri", imageUri);
-
-  useEffect(() => {
-    setSelectedImage(params.uri);
-  }, [params]);
+  useEffect(() => {});
 
   const showAlertMessage = (data: any) => {
     if (data.status === 0) {
@@ -114,10 +110,6 @@ const HomeScreen = () => {
       const match = /\.(\w+)$/.exec(filename);
       const type = match ? `image/${match[1]}` : "image";
 
-      console.log("imageUri-----", imageUri);
-      console.log("filename-----", filename);
-      console.log("type-----", type);
-
       formData.append("file", {
         uri: imageUri,
         name: filename || `image.${type.split("/")[1]}`,
@@ -167,10 +159,7 @@ const HomeScreen = () => {
         }}
       >
         {selectedImage && (
-          <Image
-            source={{ uri: selectedImage.uri || params.uri }}
-            style={styles.image}
-          />
+          <Image source={{ uri: selectedImage.uri }} style={styles.image} />
         )}
 
         {!selectedImage && (
@@ -179,10 +168,6 @@ const HomeScreen = () => {
             style={styles.image}
           />
         )}
-
-        {/* {params.uri && (
-          <Image source={{ uri: params.uri }} style={styles.image} />
-        )} */}
 
         <CustomButton
           text={selectedImage ? "Upload Image" : "Pick Image"}
