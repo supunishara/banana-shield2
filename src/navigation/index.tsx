@@ -65,9 +65,12 @@ const MainTabNavigator = () => {
             iconName = focused ? "home" : "home-outline";
           } else if (route.name === "Chat") {
             iconName = focused ? "message" : "message-outline";
-          } else if (route.name === "Notification") {
-            iconName = focused ? "bell" : "bell-outline";
-          } else if (route.name === "Profile") {
+          }
+
+          // else if (route.name === "Notification") {
+          //   iconName = focused ? "bell" : "bell-outline";
+          // }
+          else if (route.name === "Profile") {
             iconName = focused ? "account" : "account-outline";
           }
 
@@ -82,7 +85,7 @@ const MainTabNavigator = () => {
     >
       <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Chat" component={ChatNavigator} />
-      <Tab.Screen name="Notification" component={NotoficationScreen} />
+      {/* <Tab.Screen name="Notification" component={NotoficationScreen} /> */}
       <Tab.Screen name="Profile" component={ProfileScreen} />
     </Tab.Navigator>
   );

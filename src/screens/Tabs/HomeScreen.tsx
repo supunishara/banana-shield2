@@ -26,8 +26,6 @@ const HomeScreen = () => {
   const URL = "http://192.168.203.108/api/upload-image/";
   const params = route.params || {};
 
-  console.log("imageUri----imageUri", params);
-
   useEffect(() => {});
 
   const showAlertMessage = (data: any) => {
@@ -37,6 +35,7 @@ const HomeScreen = () => {
         description: `Sorry! Internal Server Error...`,
         type: "danger",
         duration: 4000,
+        position: "center",
       });
     } else if (data.status === 1) {
       showMessage({
@@ -44,6 +43,7 @@ const HomeScreen = () => {
         description: `This is not a "Puwalu" Banana`,
         type: "danger",
         duration: 4000,
+        position: "center",
       });
     } else if (data.status === 2) {
       showMessage({
@@ -51,6 +51,7 @@ const HomeScreen = () => {
         description: `This is detected as a Puwalu Banana.But this is not a diseased banana`,
         type: "success",
         duration: 4000,
+        position: "center",
       });
     } else if (data.status === 3) {
       showMessage({
@@ -58,6 +59,7 @@ const HomeScreen = () => {
         description: `Puwalu and diseased detected`,
         type: "success",
         duration: 4000,
+        position: "center",
       });
     }
   };
@@ -179,11 +181,11 @@ const HomeScreen = () => {
           loadingState={false}
         />
 
-        <CustomButton
+        {/* <CustomButton
           text={"Take a picture"}
           onPress={onCameraPressed}
           loadingState={false}
-        />
+        /> */}
       </View>
       {/* <Button title="Pick an image from camera roll" onPress={pickImage} />
       {image && <Image source={{ uri: image }} style={styles.image} />} */}
